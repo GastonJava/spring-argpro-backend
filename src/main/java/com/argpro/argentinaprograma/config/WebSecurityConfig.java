@@ -101,7 +101,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
    // estaba comentado ...
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/**")
-                .allowedOrigins("http://localhost:4200", "https://localhost:4200", "http://localhost:8080", "https://localhost:8080")
+                //.allowedOrigins("http://localhost:4200", "https://localhost:4200", "http://localhost:8080", "https://localhost:8080")
+                .allowedOrigins("https://argentina-programa-f05d3.firebaseapp.com", "https://argentina-programa-f05d3.firebaseapp.com",
+                        "https://spring-argpro-backend.azurewebsites.net", "https://spring-argpro-backend.azurewebsites.net")
                 .allowedHeaders("authorization", "contentType", "Origin", "Content-Type", "X-Auth-Token")
                 .exposedHeaders("Authorization")
                 .allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS");

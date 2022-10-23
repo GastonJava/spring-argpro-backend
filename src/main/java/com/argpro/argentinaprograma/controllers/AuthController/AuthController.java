@@ -32,7 +32,9 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:4200", maxAge = 4800) //cambiar cualquier cosa: 3600
+//@CrossOrigin(origins = "http://localhost:4200", maxAge = 4800) //cambiar cualquier cosa: 3600
+@CrossOrigin(origins = "https://spring-argpro-backend.azurewebsites.net", maxAge = 4800)
+
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
