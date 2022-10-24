@@ -15,7 +15,8 @@ import com.argpro.argentinaprograma.models.config.Base;
 import com.argpro.argentinaprograma.repositories.GenericoRepository.BaseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
-
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 
 public abstract class BaseServiceImple<T extends Base, ID extends Serializable> implements BaseService<T, ID> {

@@ -1,5 +1,4 @@
-
-package com.argpro.portfolio.controllers.GestionUsuarioController;
+package com.argpro.argentinaprograma.controllers.GestionUsuarioController;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;

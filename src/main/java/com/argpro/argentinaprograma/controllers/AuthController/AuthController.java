@@ -33,9 +33,10 @@ import java.util.Collections;
 import java.util.List;
 
 //@CrossOrigin(origins = "http://localhost:4200", maxAge = 4800) //cambiar cualquier cosa: 3600
-@CrossOrigin(origins = "https://spring-argpro-backend.azurewebsites.net", maxAge = 4800)
+//@CrossOrigin(origins = "https://spring-argpro-backend.azurewebsites.net", maxAge = 4800)
 
 @RestController
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RequestMapping("/api/auth")
 public class AuthController {
 
@@ -102,7 +103,7 @@ public class AuthController {
               jwtAuthResonseDTO.setRole("ADMIN");
             }else {
               jwtAuthResonseDTO.setRole("USUARIO");
-             }
+            }
             //roles = iRolRepository.findByRolnombre().;
 
             //logger.info("que nos trae SET ROLE:... "+jwtAuthResonseDTO.getRole());
@@ -129,7 +130,6 @@ public class AuthController {
         }
 
          */
-
 
         if(iUsuarioRepository.existsByNombre(registroDTO.getNombre())) {
             return new ResponseEntity<>("Ese nombre de usuario ya existe", HttpStatus.BAD_REQUEST);
